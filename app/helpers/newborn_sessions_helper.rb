@@ -1,0 +1,2 @@
+module NewbornSessionsHelper
+end

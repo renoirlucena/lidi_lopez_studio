@@ -1,0 +1,29 @@
+<h1>Maternity Packages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maternities.each do |maternity| %>
+      <tr>
+        <td><%= maternity.name %></td>
+        <td><%= maternity.description %></td>
+        <td><%= number_to_currency(maternity.price, unit: "$") %></td>
+        <td><%= link_to 'Show', maternity %></td>
+        <td><%= link_to 'Edit', edit_maternity_path(maternity) %></td>
+        <td><%= link_to 'Destroy', maternity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maternity Package', new_maternity_path %>

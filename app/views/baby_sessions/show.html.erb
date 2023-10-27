@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @baby_session %>
+
+<div>
+  <%= link_to "Edit this baby session", edit_baby_session_path(@baby_session) %> |
+  <%= link_to "Back to baby sessions", baby_sessions_path %>
+
+  <%= button_to "Destroy this baby session", @baby_session, method: :delete %>
+</div>

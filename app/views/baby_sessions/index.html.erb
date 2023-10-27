@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Baby sessions</h1>
+
+<div id="baby_sessions">
+  <% @baby_sessions.each do |baby_session| %>
+    <%= render baby_session %>
+    <p>
+      <%= link_to "Show this baby session", baby_session %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New baby session", new_baby_session_path %>

@@ -1,0 +1,19 @@
+<h1>Edit Package</h1>
+
+<%= render 'form', package: @package %>
+
+<br>
+
+<div>
+  <%= link_to 'Show', @package %> |
+  <%= link_to 'Back', packages_path %>
+</div>
+
+<div>
+  <!-- Display package details here -->
+  <h2>Package Details</h2>
+  <p><strong>Name:</strong> <%= @package.name %></p>
+  <p><strong>Description:</strong> <%= @package.description %></p>
+  <p><strong>Price:</strong> <%= number_to_currency(@package.price, unit: "$") %></p>
+  <!-- Add more package details fields here -->
+</div>

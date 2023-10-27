@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Family sessions</h1>
+
+<div id="family_sessions">
+  <% @family_sessions.each do |family_session| %>
+    <%= render family_session %>
+    <p>
+      <%= link_to "Show this family session", family_session %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New family session", new_family_session_path %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @family_session %>
+
+<div>
+  <%= link_to "Edit this family session", edit_family_session_path(@family_session) %> |
+  <%= link_to "Back to family sessions", family_sessions_path %>
+
+  <%= button_to "Destroy this family session", @family_session, method: :delete %>
+</div>

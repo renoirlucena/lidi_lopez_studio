@@ -1,0 +1,29 @@
+<!-- app/views/maternity_sessions/index.html.erb -->
+
+<h1>Maternity Sessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maternity_sessions.each do |maternity_session| %>
+      <tr>
+        <td><%= maternity_session.name %></td>
+        <td><%= maternity_session.description %></td>
+        <td><%= number_to_currency(maternity_session.price, unit: "$") %></td>
+        <td><%= link_to 'Show', maternity_session %></td>
+        <td><%= link_to 'Edit', edit_maternity_session_path(maternity_session) %></td>
+        <td><%= link_to 'Destroy', maternity_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Maternity Session', new_maternity_session_path %>

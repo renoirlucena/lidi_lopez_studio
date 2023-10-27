@@ -1,0 +1,2 @@
+module BabySessionsHelper
+end

@@ -1,0 +1,2 @@
+module CakeSmashSessionsHelper
+end

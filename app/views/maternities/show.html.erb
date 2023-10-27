@@ -1,0 +1,19 @@
+<p>
+  <strong>Name:</strong>
+  <%= @maternity.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @maternity.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency(@maternity.price, unit: "$") %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_maternity_path(@maternity) %> |
+<%= link_to 'Back', maternities_path %>

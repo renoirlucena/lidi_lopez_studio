@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cake_smash_session %>
+
+<div>
+  <%= link_to "Edit this cake smash session", edit_cake_smash_session_path(@cake_smash_session) %> |
+  <%= link_to "Back to cake smash sessions", cake_smash_sessions_path %>
+
+  <%= button_to "Destroy this cake smash session", @cake_smash_session, method: :delete %>
+</div>

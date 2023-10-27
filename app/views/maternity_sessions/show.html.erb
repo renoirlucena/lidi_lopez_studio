@@ -1,0 +1,9 @@
+<!-- app/views/maternity_sessions/show.html.erb -->
+
+<h1><%= @maternity_session.name %></h1>
+
+<p><strong>Description:</strong> <%= @maternity_session.description %></p>
+<p><strong>Price:</strong> <%= number_to_currency(@maternity_session.price, unit: "$") %></p>
+
+<%= link_to 'Edit', edit_maternity_session_path(@maternity_session) %> |
+<%= link_to 'Back', maternity_sessions_path %>
